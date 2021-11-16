@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" stylesheets="styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.vondra.MainController">
+            <top>
+                <HBox>
+                    <ToolBar>
+                        <Button fx:id="btnNewGame">Nova Hra</Button>
+                        <Button fx:id="btnHelp">Napoveda</Button>
+                        <Button fx:id="btnExit">Konec</Button>
+                    </ToolBar>
+                    <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <Label fx:id="locationName">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+                    <Label fx:id="locationDescription">Popis</Label>
+                    </VBox>
+                </HBox>
+            </top>
+        <right>
+            <VBox prefHeight="219.0" prefWidth="252.0" spacing="30" styleClass="muj-box">
+                <!--Vychody-->
+                <VBox>
+                    <Label>
+                        <text>
+                            Vychody
+                        </text>
+
+                       <font>
+                          <Font name="System Bold" size="14.0" />
+                       </font>
+                    </Label>
+                    <VBox fx:id="exits" spacing="10">
+
+                    </VBox>
+                </VBox>
+
+                <!--Predmety-->
+                <VBox>
+                    <Label>
+                        <text>
+                            Predmety
+                        </text>
+
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <VBox fx:id="items" spacing="10">
+
+                    </VBox>
+                </VBox>
+            </VBox>
+        </right>
+        <left>
+            <VBox prefHeight="219.0" prefWidth="168.0" spacing="30" styleClass="muj-box">
+                <!--Inventar-->
+                <VBox>
+                    <Label>
+                        <text>
+                            Inventar
+                        </text>
+
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <VBox fx:id="inventory" spacing="10">
+
+                    </VBox>
+                </VBox>
+                <!--Postavy-->
+                <VBox>
+                    <Label>
+                        <text>
+                            Postavy
+                        </text>
+
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Label>
+                    <VBox fx:id="postavy" spacing="10">
+
+                    </VBox>
+                </VBox>
+            </VBox>
+        </left>
+
+        <center>
+            <StackPane fx:id="stack">
+            <Label fx:id="background" alignment="CENTER" />
+            </StackPane>
+        </center>
+
+        <bottom>
+            <VBox>
+                <TextArea fx:id="TextOutput" editable="false" />
+                <TextField fx:id="TextInput" onKeyPressed="#onInputKeyPressed" />
+            </VBox>
+        </bottom>
+    </BorderPane>
